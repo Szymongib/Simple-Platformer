@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\GameObjects">
+      <UniqueIdentifier>{89f58db4-704e-46b0-8524-2e1e18472a9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameObjects\Movable">
+      <UniqueIdentifier>{64eb33e6-9bd2-4466-b090-99aa3f369fa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects">
+      <UniqueIdentifier>{a49e5009-1e8d-48f2-9730-d72ca46c6637}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameObjects\Movable\Projectiles">
+      <UniqueIdentifier>{b1ea4c5b-a868-4d95-b8c5-f7907787761a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects\Movable">
+      <UniqueIdentifier>{9a8d2723-bddf-4686-b354-9029127d0f03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects\Movable\Projectiles">
+      <UniqueIdentifier>{05db823b-2563-4cfe-86d6-f37d783a414e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects\Movable\Entities">
+      <UniqueIdentifier>{56a866af-c185-49d0-b45e-56bfd87262e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameObjects\Movable\Entities">
+      <UniqueIdentifier>{b9fe9ba8-d777-4e7a-88ad-2eae95876aa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameObjects\Movable\Entities\Enemies">
+      <UniqueIdentifier>{05ed25ec-540a-4e84-bf44-15a10937b20a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Triggers">
+      <UniqueIdentifier>{f3f10f4d-87f7-4b6d-8be1-33131f58f923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Triggers">
+      <UniqueIdentifier>{8b53c1e3-211b-4a56-a651-e4e475ede53b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PreDefinedObjects">
+      <UniqueIdentifier>{820d1e96-6e4d-486d-b099-60d88637055a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects\Movable\Entities\Enemies">
+      <UniqueIdentifier>{3fccd989-d413-4568-8d8a-b4c1e930c6ac}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticRectangle.cpp">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Explosion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MovableRectangle.cpp">
+      <Filter>Source Files\GameObjects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectRectangle.cpp">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="ExplosiveFireBall.cpp">
+      <Filter>Source Files\GameObjects\Movable\Projectiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Source Files\GameObjects\Movable\Projectiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Projectile.cpp">
+      <Filter>Source Files\GameObjects\Movable\Projectiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\GameObjects\Movable\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files\GameObjects\Movable\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="MovingObject.cpp">
+      <Filter>Source Files\GameObjects\Movable</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger.cpp">
+      <Filter>Source Files\Triggers</Filter>
+    </ClCompile>
+    <ClCompile Include="DamagingTrigger.cpp">
+      <Filter>Source Files\Triggers</Filter>
+    </ClCompile>
+    <ClCompile Include="PickUp.cpp">
+      <Filter>Source Files\Triggers</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckPointTrigger.cpp">
+      <Filter>Source Files\Triggers</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PredefinedObjectsGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MapCreator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files\GameObjects\Movable\Entities\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="PatrolingEnemy.cpp">
+      <Filter>Source Files\GameObjects\Movable\Entities\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="ChargingEnemy.cpp">
+      <Filter>Source Files\GameObjects\Movable\Entities\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="JumpingChargingEnemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ObjectRectangle.h">
+      <Filter>Header Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="MovableRectangle.h">
+      <Filter>Header Files\GameObjects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Projectile.h">
+      <Filter>Header Files\GameObjects\Movable\Projectiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Header Files\GameObjects\Movable\Projectiles</Filter>
+    </ClInclude>
+    <ClInclude Include="ExplosiveFireBall.h">
+      <Filter>Header Files\GameObjects\Movable\Projectiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files\GameObjects\Movable\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files\GameObjects\Movable\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header Files\GameObjects\Movable\Entities\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="PatrolingEnemy.h">
+      <Filter>Header Files\GameObjects\Movable\Entities\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingObject.h">
+      <Filter>Header Files\GameObjects\Movable</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger.h">
+      <Filter>Header Files\Triggers</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DamagingTrigger.h">
+      <Filter>Header Files\Triggers</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckPointTrigger.h">
+      <Filter>Header Files\Triggers</Filter>
+    </ClInclude>
+    <ClInclude Include="PickUp.h">
+      <Filter>Header Files\Triggers</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticRectangle.h">
+      <Filter>Header Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Explosion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PredefinedObjectsGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MapCreator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChargingEnemy.h">
+      <Filter>Header Files\GameObjects\Movable\Entities\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="JumpingChargingEnemy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Platforer1.0.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
