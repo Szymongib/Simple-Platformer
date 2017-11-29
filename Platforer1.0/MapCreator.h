@@ -24,7 +24,8 @@ public:
 		std::vector<Enemy*>* enemies,
 		std::vector<MovingObject>* movingObjects,
 		std::vector<Trigger*>* triggers,
-		Player* player);
+		Player* player,
+		LevelFinishTrigger** finishTrigger);
 
 };
 

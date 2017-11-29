@@ -7,6 +7,7 @@
 #include "Enemy.h"
 #include "Player.h"
 #include "ChargingEnemy.h"
+#include "LevelFinishTrigger.h"
 
 class StaticRectangle;
 
@@ -26,5 +27,9 @@ public:
 
 	Enemy* generateChargingEnemy(sf::Vector2f position, Player* player);
 
+
+
+
+	LevelFinishTrigger* generateLevelFinishTrigger(sf::Vector2f position);
 };
 

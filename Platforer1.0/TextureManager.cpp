@@ -21,7 +21,7 @@ TextureManager::TextureManager()
 	addTexture(TextureName::smallHpPotion, sf::Vector2u(1, 1), "Sprites/smallHpPotion.png");
 	addTexture(TextureName::groundSurface2, sf::Vector2u(1, 1), "Sprites/groundSurface2.png");
 	addTexture(TextureName::ground2, sf::Vector2u(1, 1), "Sprites/ground2.png");
-
+	addTexture(TextureName::castledoors, sf::Vector2u(1, 1), "Sprites/castledoors.png");
 }
 
 

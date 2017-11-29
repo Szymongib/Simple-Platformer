@@ -56,3 +56,10 @@ Enemy * PredefinedObjectsGenerator::generateChargingEnemy(sf::Vector2f position,
 	(size, position + sf::Vector2f((BASE_BLOCK_SIZE - size.x) / 2, (BASE_BLOCK_SIZE - size.y) / 2), globalManager.getTexture(TextureName::enemy), 0, BASE_ENEMY_HEALTH, BASE_ENEMY_TOUCH_DAMAGE, player);
 	return chargingEnemy;
 }
+
+LevelFinishTrigger * PredefinedObjectsGenerator::generateLevelFinishTrigger(sf::Vector2f position)
+{
+	sf::Vector2f size(2*BASE_BLOCK_SIZE, 3*BASE_BLOCK_SIZE);
+	LevelFinishTrigger* finishTrigger = new LevelFinishTrigger(size, position-sf::Vector2f(0,size.y-BASE_BLOCK_SIZE), globalManager.getTexture(TextureName::castledoors));
+	return  finishTrigger;
+}

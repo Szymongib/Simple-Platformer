@@ -30,6 +30,7 @@ private:
 	vector<Explosion*> explosions;
 	vector<MovingObject> movingObjects;
 	vector<Trigger*> triggers;
+	LevelFinishTrigger* finishTrigger;
 
 	MainMenu mainMenu;
 
@@ -46,6 +47,9 @@ private:
 
 	sf::Clock clock;
 	float deltaTime;
+	int lvlNumber;
+	bool lvlTransision;
+	bool lvlFinished;
 
 public:
 
@@ -65,7 +69,10 @@ public:
 	void checkDeathsAndMove();
 	void moveCamera();
 	void updateInterface();
+	bool checkIfLevelFinished();
 	void drawAll();
 	void resetPlayerVelocity();
+
+	void loadNextLevel();
 };
 

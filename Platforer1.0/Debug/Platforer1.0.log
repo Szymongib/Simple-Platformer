@@ -1,31 +1,3 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Platforer1.0.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Player.cpp
-c:\vs_projects\projekt_sem3\platforer1.3\platforer1.0\player.cpp(33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\vs_projects\projekt_sem3\platforer1.3\platforer1.0\player.cpp(177): warning C4930: 'sf::Vector2f directionSum(void)': prototyped function not called (was a variable definition intended?)
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  Trigger.cpp
-  TextureManager.cpp
-  StaticRectangle.cpp
-  Projectile.cpp
   PredefinedObjectsGenerator.cpp
-  PickUp.cpp
-  PatrolingEnemy.cpp
-  ObjectRectangle.cpp
-  MovingObject.cpp
-  MovableRectangle.cpp
-  MapCreator.cpp
-  MainMenu.cpp
-  main.cpp
-  JumpingChargingEnemy.cpp
-  Game.cpp
-  ExplosiveFireBall.cpp
-  Explosion.cpp
-  Entity.cpp
-  Enemy.cpp
-  DamagingTrigger.cpp
-  CheckPointTrigger.cpp
-  ChargingEnemy.cpp
-  Bullet.cpp
-  Animation.cpp
   Platforer1.0.vcxproj -> C:\VS_Projects\Projekt_Sem3\Platforer1.3\Debug\SimplePlatforer.exe

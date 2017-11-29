@@ -130,6 +130,7 @@
     <ClCompile Include="ExplosiveFireBall.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="JumpingChargingEnemy.cpp" />
+    <ClCompile Include="LevelFinishTrigger.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="MapCreator.cpp" />
@@ -158,6 +159,7 @@
     <ClInclude Include="ExplosiveFireBall.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="JumpingChargingEnemy.h" />
+    <ClInclude Include="LevelFinishTrigger.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="MapCreator.h" />
     <ClInclude Include="MovableRectangle.h" />

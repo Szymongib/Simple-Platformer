@@ -13,7 +13,15 @@ MapCreator::~MapCreator()
 {
 }
 
-void MapCreator::CreateMapFromTextFile(int* mapWidth, std::string fileName, std::vector<StaticRectangle>* obstacles, std::vector<Enemy*>* enemies, std::vector<MovingObject>* movingObjects, std::vector<Trigger*>* triggers, Player* player)
+void MapCreator::CreateMapFromTextFile(
+	int* mapWidth,
+	std::string fileName,
+	std::vector<StaticRectangle>* obstacles, 
+	std::vector<Enemy*>* enemies,
+	std::vector<MovingObject>* movingObjects,
+	std::vector<Trigger*>* triggers,
+	Player* player,
+	LevelFinishTrigger** finishTrigger)
 {
 	std::fstream file;
 	file.open(fileName);
@@ -45,12 +53,17 @@ void MapCreator::CreateMapFromTextFile(int* mapWidth, std::string fileName, std:
 			case '2':
 				enemies->push_back(objectGenerator.generateChargingEnemy(position, player));
 				break;
+			case 'F':
+				*finishTrigger = objectGenerator.generateLevelFinishTrigger(position);
+				break;
 			}
 		}
 		if (line.length() > maxLineLength)
 			maxLineLength = line.length();
 		lineNum++;
+
 	}
 
 	*mapWidth = maxLineLength*BASE_BLOCK_SIZE;
+	file.close();
 }

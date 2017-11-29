@@ -5,6 +5,10 @@
 Game::Game():
 	mainMenu(MainMenu(window))
 {
+	lvlNumber = 1;
+	lvlTransision = true;
+	lvlFinished = false;
+	player = nullptr;
 }
 
 
@@ -18,6 +22,7 @@ void Game::initialize()
 	initializePlayer();
 	initializeMap();
 	initializeEnemies();
+	lvlTransision = false;
 }
 
 void Game::initializeWindow()
@@ -33,8 +38,11 @@ void Game::initializeWindow()
 void Game::initializeMap()
 {
 	// TODO - path to constant
-	mapCreator.CreateMapFromTextFile(&mapWidth,"Maps\\map1.txt", &obstacles, &enemies, &movingObjects, &triggers, player);
+	std::string mapName = "Maps\\map" + std::to_string(lvlNumber) + ".txt";
+	mapCreator.CreateMapFromTextFile(&mapWidth, mapName, &obstacles, &enemies, &movingObjects, &triggers, player, &finishTrigger);
 	
+	triggers.push_back(finishTrigger);
+
 	coinCounter = sf::Text("Coins: ", arialFont, 100);
 
 	// Initialize Background
@@ -64,7 +72,11 @@ void Game::initializeMap()
 
 void Game::initializePlayer()
 {
-	player = new Player(sf::Vector2f(BASE_BLOCK_SIZE-10, BASE_BLOCK_SIZE-5), sf::Vector2f(100, 100), projectiles, globalManager.getTexture(TextureName::player), 0.2f);
+	if(player == nullptr)
+		player = new Player(sf::Vector2f(BASE_BLOCK_SIZE-10, BASE_BLOCK_SIZE-5), sf::Vector2f(100, 100), projectiles, globalManager.getTexture(TextureName::player), 0.2f);
+	else {
+		player->setPosition(sf::Vector2f(100, 100));
+	}
 }
 
 void Game::initializeEnemies()
@@ -102,7 +114,15 @@ void Game::runMainGameLoop()
 				window->close();
 		}
 
-		//if(mainMenu.getGameStarted()) {
+		if (lvlFinished) {
+			std::cout << "Level finished!!" << std::endl;
+		}
+
+		if (lvlTransision) {
+			// show loading screen
+		}
+
+		// else if(mainMenu.getGameStarted()) {
 
 			deltaTime = clock.getElapsedTime().asSeconds();;
 			if (deltaTime > 1.0f / 20.0f) {
@@ -114,6 +134,8 @@ void Game::runMainGameLoop()
 			changeSpeed();
 			handleCollisions();
 			checkDeathsAndMove();
+			if (checkIfLevelFinished())
+				continue;
 			moveCamera();
 			updateInterface();
 			drawAll();
@@ -301,6 +323,20 @@ void Game::updateInterface()
 	coinCounter.setPosition(cameraPosition);
 }
 
+bool Game::checkIfLevelFinished()
+{
+	if (finishTrigger->isLevelFinished()) {
+		// Level finished message
+		// Press enter
+		lvlFinished = true;
+		delete finishTrigger;
+		loadNextLevel();
+		return true;
+	}
+
+	return false;
+}
+
 void Game::drawAll()
 {
 	window->clear();
@@ -319,6 +355,10 @@ void Game::drawAll()
 	for (unsigned int i = 0; i < triggers.size(); i++) {
 		triggers[i]->draw(*window);
 	}
+
+	// Finish trigger
+	finishTrigger->draw(*window);
+
 
 	//Przeciwnicy
 	for (unsigned int i = 0; i < enemies.size(); i++) {
@@ -353,3 +393,23 @@ void Game::resetPlayerVelocity()
 { 
 	player->velocity.x = 0;
 }
+
+void Game::loadNextLevel()
+{
+	lvlNumber++;
+
+	enemies.clear();
+	projectiles.clear();
+	obstacles.clear();
+	explosions.clear();
+	triggers.clear();
+	movingObjects.clear();
+
+	initializeMap();
+	initializePlayer();
+	initializeEnemies();
+
+	lvlTransision = false;
+	lvlFinished = false;
+}
+
