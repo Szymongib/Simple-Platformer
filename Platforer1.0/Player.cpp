@@ -18,6 +18,10 @@ Player::Player(sf::Vector2f size, sf::Vector2f position, std::vector<Projectile*
 	coins = 0;
 	affectedByCollisionsWithEnemies = true;
 
+	secJumpCountDown = 0;
+	bulletCountDown = 0;
+	fireBallCountDown = 0;
+
 	checkPoint = sf::Vector2f(100, 100);
 
 	object.setTexture(&texture.texture);
@@ -318,6 +322,7 @@ void Player::handleMovement(float deltaTime)
 void Player::InputManager(float deltaTime) {
 
 	bulletCountDown -= deltaTime;
+	fireBallCountDown -= deltaTime;
 	secJumpCountDown -= deltaTime;
 
 	if (bulletCountDown <= 0) {
@@ -360,7 +365,7 @@ void Player::InputManager(float deltaTime) {
 		isShooting = true;
 	}
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::B) && shootingFireBall == false) {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::B) && shootingFireBall == false && fireBallCountDown <= 0) {
 		shootingFireBall = true;
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::B) && shootingFireBall == true) {
@@ -372,6 +377,7 @@ void Player::InputManager(float deltaTime) {
 		vecProjectiles.push_back(fireBall(50, 1, nextFireBallRange));
 		shootingFireBall = false;
 		nextFireBallRange = 1;
+		fireBallCountDown = EXPLOSIVE_FIRE_BALL_DELAY;
 	}
 
 }
@@ -393,6 +399,9 @@ void Player::respawn()
 	health = maxHealth;
 	lives--;
 	velocity = sf::Vector2f(0, 0);
+	bulletCountDown = 0;
+	fireBallCountDown = 0;
+	secJumpCountDown = 0;
 }
 
 int Player::getCoins()

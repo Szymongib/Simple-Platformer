@@ -16,7 +16,7 @@ JumpingChargingEnemy::~JumpingChargingEnemy()
 void JumpingChargingEnemy::aiAlghoritm()
 {
 	if (triggered) {
-		int r = rand() % 10;
+		int r = rand() % 1000;
 
 		if (r <= 5) {
 			if (!inTheAir) {

@@ -142,6 +142,7 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PredefinedObjectsGenerator.cpp" />
     <ClCompile Include="Projectile.cpp" />
+    <ClCompile Include="ShootingEnemy.cpp" />
     <ClCompile Include="StaticRectangle.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="Trigger.cpp" />
@@ -170,6 +171,7 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="PredefinedObjectsGenerator.h" />
     <ClInclude Include="Projectile.h" />
+    <ClInclude Include="ShootingEnemy.h" />
     <ClInclude Include="StaticRectangle.h" />
     <ClInclude Include="TextureManager.h" />
     <ClInclude Include="Trigger.h" />

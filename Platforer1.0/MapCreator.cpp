@@ -50,8 +50,14 @@ void MapCreator::CreateMapFromTextFile(
 			case 'P':
 				triggers->push_back(objectGenerator.generateCheckPoint(position));
 				break;
+			case '1':
+				enemies->push_back(objectGenerator.generateBasicEnemy(position));
+				break;
 			case '2':
 				enemies->push_back(objectGenerator.generateChargingEnemy(position, player));
+				break;
+			case '3':
+				enemies->push_back(objectGenerator.generateJumpingChargingEnemy(position, player));
 				break;
 			case 'F':
 				*finishTrigger = objectGenerator.generateLevelFinishTrigger(position);

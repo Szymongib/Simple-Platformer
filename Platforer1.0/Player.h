@@ -65,6 +65,7 @@ private:
 	bool isImmune;
 	float immunityTime;
 	float bulletCountDown;
+	float fireBallCountDown;
 	float secJumpCountDown;
 
 };

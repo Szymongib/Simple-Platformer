@@ -49,12 +49,27 @@ CheckPointTrigger * PredefinedObjectsGenerator::generateCheckPoint(sf::Vector2f 
 	return checkPoint;
 }
 
+Enemy * PredefinedObjectsGenerator::generateBasicEnemy(sf::Vector2f position)
+{
+	sf::Vector2f size(30, 30);
+	Enemy* enemy = new Enemy(size, position + sf::Vector2f((BASE_BLOCK_SIZE - size.x) / 2, (BASE_BLOCK_SIZE - size.y) / 2), globalManager.getTexture(TextureName::enemy), 0, BASE_ENEMY_HEALTH, BASE_ENEMY_TOUCH_DAMAGE);
+	return enemy;
+}
+
 Enemy * PredefinedObjectsGenerator::generateChargingEnemy(sf::Vector2f position, Player* player)
 {
 	sf::Vector2f size(30, 30);
 	Enemy *chargingEnemy = new ChargingEnemy
 	(size, position + sf::Vector2f((BASE_BLOCK_SIZE - size.x) / 2, (BASE_BLOCK_SIZE - size.y) / 2), globalManager.getTexture(TextureName::enemy), 0, BASE_ENEMY_HEALTH, BASE_ENEMY_TOUCH_DAMAGE, player);
 	return chargingEnemy;
+}
+
+Enemy * PredefinedObjectsGenerator::generateJumpingChargingEnemy(sf::Vector2f position, Player * player)
+{
+	sf::Vector2f size(30, 30);
+	Enemy *jumpingEnemy = new JumpingChargingEnemy
+	(size, position + sf::Vector2f((BASE_BLOCK_SIZE - size.x) / 2, (BASE_BLOCK_SIZE - size.y) / 2), globalManager.getTexture(TextureName::enemy), 0, BASE_ENEMY_HEALTH, BASE_ENEMY_TOUCH_DAMAGE, player);
+	return jumpingEnemy;
 }
 
 LevelFinishTrigger * PredefinedObjectsGenerator::generateLevelFinishTrigger(sf::Vector2f position)

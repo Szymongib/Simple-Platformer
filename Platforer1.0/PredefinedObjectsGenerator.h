@@ -7,6 +7,7 @@
 #include "Enemy.h"
 #include "Player.h"
 #include "ChargingEnemy.h"
+#include "JumpingChargingEnemy.h"
 #include "LevelFinishTrigger.h"
 
 class StaticRectangle;
@@ -25,8 +26,9 @@ public:
 	
 	CheckPointTrigger* generateCheckPoint(sf::Vector2f position);
 
+	Enemy* generateBasicEnemy(sf::Vector2f position);
 	Enemy* generateChargingEnemy(sf::Vector2f position, Player* player);
-
+	Enemy* generateJumpingChargingEnemy(sf::Vector2f position, Player* player);
 
 
 

@@ -132,6 +132,9 @@
     <ClCompile Include="LevelFinishTrigger.cpp">
       <Filter>Source Files\Triggers</Filter>
     </ClCompile>
+    <ClCompile Include="ShootingEnemy.cpp">
+      <Filter>Source Files\GameObjects\Movable\Entities\Enemies</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ObjectRectangle.h">
@@ -211,6 +214,9 @@
     </ClInclude>
     <ClInclude Include="LevelFinishTrigger.h">
       <Filter>Header Files\Triggers</Filter>
+    </ClInclude>
+    <ClInclude Include="ShootingEnemy.h">
+      <Filter>Header Files\GameObjects\Movable\Entities\Enemies</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

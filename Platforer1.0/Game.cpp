@@ -81,25 +81,6 @@ void Game::initializePlayer()
 
 void Game::initializeEnemies()
 {
-	/*Enemy *enemy1 = new Enemy(sf::Vector2f(30, 30), sf::Vector2f(20, 790), globalManager.getTexture(TextureName::enemy), 0, 100, 40);
-	Enemy *enemy2 = new Enemy(sf::Vector2f(30, 30), sf::Vector2f(600, 690), globalManager.getTexture(TextureName::enemy), 0, 200, 40);
-	Enemy *enemy3 = new Enemy(sf::Vector2f(30, 30), sf::Vector2f(720, 690), globalManager.getTexture(TextureName::enemy), 0, 300, 40);
-	Enemy *enemy4 = new Enemy(sf::Vector2f(30, 30), sf::Vector2f(1400, 690), globalManager.getTexture(TextureName::enemy), 0, 300, 40);
-	Enemy *enemy5 = new Enemy(sf::Vector2f(30, 30), sf::Vector2f(1450, 690), globalManager.getTexture(TextureName::enemy), 0, 300, 40);
-	Enemy *enemy6 = new Enemy(sf::Vector2f(30, 30), sf::Vector2f(1500, 690), globalManager.getTexture(TextureName::enemy), 0, 300, 40);
-	Enemy *patrolingEnemy = new PatrolingEnemy(sf::Vector2f(30, 30), sf::Vector2f(1700, 690), globalManager.getTexture(TextureName::enemy), 0, 300, 40, 1, 1650, 2000);
-	Enemy *chargingEnemy = new ChargingEnemy(sf::Vector2f(30, 30), sf::Vector2f(2500, 690), globalManager.getTexture(TextureName::enemy), 0, 300, 100, player);*/
-	Enemy *jumpingChargingEnemy = new JumpingChargingEnemy(sf::Vector2f(30, 30), sf::Vector2f(3000, 690), globalManager.getTexture(TextureName::enemy), 0, 30, 10, player);
-
-	//enemies.push_back(enemy1);
-	//enemies.push_back(enemy2);
-	//enemies.push_back(enemy3);
-	//enemies.push_back(enemy4);
-	//enemies.push_back(enemy5);
-	//enemies.push_back(enemy6);
-	//enemies.push_back(patrolingEnemy);
-	//enemies.push_back(chargingEnemy);
-	enemies.push_back(jumpingChargingEnemy);
 
 }
 
